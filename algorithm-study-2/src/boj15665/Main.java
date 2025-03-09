@@ -11,6 +11,7 @@ public class Main {
 
     static int m;
     static Integer[] numbers;
+    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -29,6 +30,7 @@ public class Main {
         numbers = set.toArray(new Integer[0]);
 
         dfs(new int[m], 0);
+        System.out.println(sb);
     }
 
     static void dfs(int[] pocket, int pocketSize) {
@@ -44,10 +46,9 @@ public class Main {
     }
 
     static void printPocket(int[] pocket) {
-        StringBuilder sb = new StringBuilder();
         for (int i : pocket) {
             sb.append(i).append(" ");
         }
-        System.out.println(sb);
+        sb.append("\n");
     }
 }
