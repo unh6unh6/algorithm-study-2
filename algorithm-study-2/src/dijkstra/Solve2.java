@@ -65,14 +65,6 @@ public class Solve2 {
         return result;
     }
 
-    static boolean isAllFixed(boolean[] isFix) {
-        for (boolean fix : isFix) {
-            if (!fix) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
 
 record NodeWithCost(Node node, int cost) {
