@@ -1,4 +1,4 @@
-package bog1904;
+package boj1904;
 
 import java.util.Scanner;
 
