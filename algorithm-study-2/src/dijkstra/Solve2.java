@@ -38,11 +38,8 @@ public class Solve2 {
     static int[] dijkstra(final int startNodeNumber) {
         int[] result = new int[7];
         Arrays.fill(result, Integer.MAX_VALUE);
-        boolean[] isFix = new boolean[7];
-        isFix[0] = true;
 
         result[startNodeNumber] = 0;
-        isFix[startNodeNumber] = true;
 
         Queue<NodeWithCost> queue = new PriorityQueue<>(Comparator.comparingInt(NodeWithCost::cost));
         queue.add(new NodeWithCost(nodes[startNodeNumber], 0));
